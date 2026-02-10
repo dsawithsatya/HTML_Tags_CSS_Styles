@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio & Learning Dashboard</title>
+<style>
+    /* ===== BASIC RESET ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: #f4f4f4;
+    }
+
+    /* ===== HEADER & NAV ===== */
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 40px 20px;
+    }
+
+    .hero {
+      background: #007bff;
+      color: white;
+      text-align: center;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      margin-top: 15px;
+      border: none;
+      background: white;
+      cursor: pointer;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      border-radius: 50%;
+    }
+
+    /* ===== DASHBOARD ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table, th, td {
+      border: 1px solid #333;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* ===== MEDIA ===== */
+    iframe, video {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    /* ===== FORM ===== */
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    form button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    /* ===== FAQ ===== */
+    details {
+      margin-bottom: 10px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+  
+</head>
+
+<body>
+
+<!-- ===== HEADER & NAV ===== -->
+<header>
+  <nav>
+    <h2>MyPortfolio</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#media">Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+  <h1>Welcome to <strong>My Learning Dashboard</strong></h1>
+  <p>I am a <em>Web Developer</em> learning modern web technologies.</p>
+  <button>Explore More Button</button>
+  <hr>
+  <span>HTML5</span> | <span>CSS3</span>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section id="about">
+  <article class="about">
+    <img src="cartoon_guy.jpg" alt="Profile" style="height: 100px;">
+    <div>
+      <h2>About Me</h2>
+      <p>
+        Passionate about <strong>frontend</strong> and
+        <em>backend development</em>.
+      </p>
+
+      <h4>Skills</h4>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript</li>
+        <li>Django & React</li>
+      </ul>
+    </div>
+  </article>
+</section>
+
+<!-- ===== LEARNING DASHBOARD ===== -->
+<section id="dashboard">
+  <h2>Learning Dashboard</h2>
+
+  <p>HTML Progress</p>
+  <progress value="90" max="100"></progress>
+
+  <p>CSS Skill Level</p>
+  <meter value="0.8">80%</meter>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th>Status</th>
+        <th>Completion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HTML</td>
+        <td>Completed</td>
+        <td>100%</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>In Progress</td>
+        <td>80%</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== MEDIA SECTION ===== -->
+<section id="media">
+  <h2>Media</h2>
+
+  <iframe height="250"
+    src="https://www.youtube.com/embed/dD2EISBDjWM"
+    allowfullscreen>
+  </iframe>
+
+  <video controls>
+    <source src="sample.mp4" type="video/mp4">
+  </video>
+
+  <audio controls>
+    <source src="sample.mp3" type="audio/mpeg">
+  </audio>
+</section>
+
+<!-- ===== CONTACT FORM ===== -->
+<section id="contact">
+  <h2>Contact Me</h2>
+
+  <form>
+    <label>Name</label>
+    <input type="text">
+
+    <label>Email</label>
+    <input type="email">
+
+    <label>Password</label>
+    <input type="password">
+
+    <label>Role</label>
+    <select>
+      <option>Student</option>
+      <option>Developer</option>
+    </select>
+
+    <label>Message</label>
+    <textarea rows="4"></textarea>
+
+    <label>
+      <input type="checkbox"> Subscribe
+    </label>
+
+    <label>
+      <input type="radio" name="contact"> Email
+    </label>
+    <label>
+      <input type="radio" name="contact"> Phone
+    </label>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section>
+  <h2>FAQs</h2>
+
+  <details>
+    <summary>What is this project?</summary>
+    A pure HTML & CSS portfolio project.
+  </details>
+
+  <details>
+    <summary>Is this beginner friendly?</summary>
+    Yes, covers beginner to advanced tags.
+  </details>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>GitHub | LinkedIn | Email</p>
+  <p>&copy; 2026 MyPortfolio</p>
+</footer>
+
+</body>
+</html>
